@@ -1,11 +1,9 @@
-/*  ---------------------------------------------------
-    Template Name: Ogani
-    Description:  Ogani eCommerce  HTML Template
-    Author: Colorlib
-    Author URI: https://colorlib.com
-    Version: 1.0
-    Created: Colorlib
----------------------------------------------------------  */
+/*
+  Template Name: Horta Inteligente
+  Description:  Site do Horta Inteligente
+  Version: 1.0
+  Created: Horta inteligente
+*/
 
 'use strict';
 
@@ -237,6 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         newLink.href = './dashboard.html?login=1';
         newLink.textContent = 'Monitoramento';
+
+        
+        // Verifica se a URL atual é dashboard.html e adiciona a classe 'active'
+        const currentPage = window.location.pathname.split('/').pop(); // Obtém o nome do arquivo da URL atual
+        console.log("currentPage: ", currentPage);
+        if (currentPage === 'dashboard.html') {
+            newMenuItem.classList.add('active');
+        }
 
         newMenuItem.appendChild(newLink);
 
