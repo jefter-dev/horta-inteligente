@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Altera o texto do link para "Admin" se o href for './login.html'
             if (href === './login.html') {
-                link.textContent = 'Admin';
+                // link.textContent = 'Admin';
             }
         });
     }

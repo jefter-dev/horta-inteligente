@@ -1290,6 +1290,10 @@ ol {
 	overflow: hidden;
 }
 
+.product__discount__item__pic {
+	height: 340px;
+}
+
 .product__discount__item__pic .product__discount__percent {
 	height: 45px;
 	width: 45px;
@@ -3611,7 +3615,7 @@ ol {
 }
 
 .about-us {
-	font-size: 24px;
+	font-size: 26px;
 	text-align: center;
 }
 
@@ -3700,6 +3704,28 @@ ol {
 	padding: 10px;
 }
 
+.container-hero {
+	margin-bottom: 0px;
+}
+.shoping_cart_item img {
+	max-height: 60px;
+}
+
+.shoping__cart__table table tbody tr td.shoping__cart__item {
+	width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shoping__cart__table table tbody tr td.shoping__cart__item img {
+	margin-bottom: 10px;
+}
+
+.shoping__cart__table table tbody tr td.shoping__cart__price {
+	width: 34%;
+}
+
 @media (max-width: 768px) {
 	/* Estilos para dispositivos móveis */
 	/* Aqui você coloca os estilos que serão aplicados somente
@@ -3712,8 +3738,21 @@ ol {
 	.hero__search__form {
 		width: 100% !important;
 	}
-}
+	
+	.image-product-1 {
+		width: 100% !important;
+	}
+	.container-product-1 p, .container-product-2 p {
+		text-align: center;
+	}
 
-.container-hero {
-	margin-bottom: 0px;
+	.shoping__cart__table table tbody tr td.shoping__cart__item {
+		width: 100px;
+	}
+	.shoping__cart__table table tbody tr td.shoping__cart__item img {
+		margin-right: 0px;
+	}
+	.shoping__cart__table table tbody tr td.shoping__cart__quantity .pro-qty {
+		width: 100px;
+	}
 }
