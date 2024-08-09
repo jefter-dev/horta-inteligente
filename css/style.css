@@ -3759,4 +3759,11 @@ ol {
 	.shoping__cart__table table tbody tr td.shoping__cart__quantity .pro-qty {
 		width: 100px;
 	}
+	.image-product-2 {
+		display: flex;
+		width: 100% !important;
+    }
+	.reverse {
+		flex-direction: column-reverse !important;
+	}
 }
