@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    
+
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" type="text/css">
-    
+
 </head>
 
 <body>
@@ -51,6 +53,7 @@
                 <li><a href="./shop.html">Loja</a></li>
                 <li><a href="./community.html">Comunidade</a></li>
                 <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./dashboard.html">Monitoramento</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -109,6 +112,7 @@
                             <li><a href="./tips.html">Instruções</a></li>
                             <li><a href="./community.html">Comunidade</a></li>
                             <li><a href="./contact.html">Contato</a></li>
+                            <li><a href="./dashboard.html">Monitoramento</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -133,7 +137,7 @@
         <div class="card login-form">
             <div class="card-body">
                 <h3 class="card-title text-center">
-                    <img  src="./img/logo.png" />
+                    <img src="./img/logo.png" />
                 </h3>
                 <div class="card-text">
                     <!--
@@ -151,7 +155,7 @@
                         </div>
 
                         <button style="width: 100%" onclick="loginFake()" type="button" class="site-btn">Login</button>
-                        
+
                         <div class="sign-up">
                             Não tem uma conta? <a href="#">Crie uma</a>
                         </div>
@@ -202,7 +206,8 @@
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
                                 <script>document.write(new Date().getFullYear());</script> TTodos os direitos
-                                reservados | Esse template foi desenvolvido pela <a href="https://colorlib.com" target="_blank">Horta inteligente</a>
+                                reservados | Esse template foi desenvolvido pela <a href="https://colorlib.com"
+                                    target="_blank">Horta inteligente</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -230,15 +235,15 @@
             const login = document.getElementById("login").value;
             const password = document.getElementById("password").value;
 
-            if(login == "") {
+            if (login == "") {
                 toastr.info('Digite o login')
                 return false;
-            } else if(password == "") {
+            } else if (password == "") {
                 toastr.info('Digite a senha')
                 return false;
             }
 
-            if(login == "admin" && password == "123") {
+            if (login == "admin" && password == "123") {
                 window.location.href = "./dashboard.html?login=1";
             } else {
                 toastr.error('Login inválido')

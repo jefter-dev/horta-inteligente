@@ -229,33 +229,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginValue = urlParams.get('login');
 
     if (loginValue == 1) {
-        // Cria o novo item de menu
-        const newMenuItem = document.createElement('li');
-        const newLink = document.createElement('a');
+        // Seleciona o item de menu "Monitoramento" existente
+        const monitoramentoMenuItem = document.querySelector('.slicknav_nav a[href*="dashboard.html"], .header__menu a[href*="dashboard.html"]');
 
-        newLink.href = './dashboard.html?login=1';
-        newLink.textContent = 'Monitoramento';
-
-        
-        // Verifica se a URL atual é dashboard.html e adiciona a classe 'active'
-        const currentPage = window.location.pathname.split('/').pop(); // Obtém o nome do arquivo da URL atual
-        console.log("currentPage: ", currentPage);
-        if (currentPage === 'dashboard.html') {
-            newMenuItem.classList.add('active');
-        }
-
-        newMenuItem.appendChild(newLink);
-
-        // Adiciona o novo item ao menu móvel e desktop
-        const mobileMenu = document.querySelector('.slicknav_nav ul');
-        const mobileMenuDesktop = document.querySelector('.header__menu ul');
-
-        if (mobileMenu) {
-            mobileMenu.appendChild(newMenuItem.cloneNode(true)); // Adiciona ao menu móvel
-        }
-
-        if (mobileMenuDesktop) {
-            mobileMenuDesktop.appendChild(newMenuItem); // Adiciona ao menu desktop
+        // Verifica se a URL atual é dashboard.html e adiciona a classe 'active' ao pai
+        const currentPage = window.location.pathname.split('/').pop();
+        if (monitoramentoMenuItem && currentPage === 'dashboard.html') {
+            monitoramentoMenuItem.parentElement.classList.add('active');
         }
 
         // Adiciona o parâmetro ?login=1 a todos os links do menu, se não estiver presente
